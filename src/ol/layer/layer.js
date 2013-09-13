@@ -24,7 +24,7 @@ ol.layer.Layer = function(options) {
 
   /**
    * @private
-   * @type {{layer: ol.layer.Layer,
+   * @type {{layer: ol.layer.Vector,
    *     featuresBySelectedFeatureUid: Object.<*, ol.Feature>,
    *     selectedFeaturesByFeatureUid: Object.<*, ol.Feature>}}
    */
@@ -73,7 +73,7 @@ ol.layer.Layer.prototype.getLayerStatesArray = function(opt_obj) {
 
 
 /**
- * @return {{layer: ol.layer.Layer,
+ * @return {{layer: ol.layer.Vector,
  *     featuresBySelectedFeatureUid: Object.<*, ol.Feature>,
  *     selectedFeaturesByFeatureUid: Object.<*, ol.Feature>}} Selection data.
  */
