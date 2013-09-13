@@ -73,6 +73,12 @@ goog.inherits(ol.geom.GeometryEvent, goog.events.Event);
 
 
 /**
+ * Invalidates the rectangular 2D envelope for this geoemtry.
+ */
+ol.geom.Geometry.prototype.invalidateBounds = goog.abstractMethod;
+
+
+/**
  * Geometry types.
  *
  * @enum {string}
