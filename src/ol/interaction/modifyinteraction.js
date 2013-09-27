@@ -302,7 +302,6 @@ ol.interaction.Modify.prototype.handleMouseMove_ = function(evt) {
         var vertex = /** @type {ol.Coordinate} */
             (ol.coordinate.closestOnSegment(pixelCoordinate, segment));
         var vertexPixel = map.getPixelFromCoordinate(vertex);
-        console.log(Math.sqrt(ol.coordinate.squaredDistance(pixel, vertexPixel)))
         if (Math.sqrt(ol.coordinate.squaredDistance(pixel, vertexPixel)) <=
             this.pixelTolerance_) {
           var pixel1 = map.getPixelFromCoordinate(segment[0]);
