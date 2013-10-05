@@ -79,8 +79,9 @@ ol.interaction.Modify.prototype.addIndex_ = function(layer, features) {
     var feature = features[i];
     var geometry = feature.getGeometry();
     if (geometry instanceof ol.geom.AbstractCollection) {
-      for (var j = 0, jj = geometry.components.length; j < jj; ++j) {
-        this.addSegments_(layer, feature, geometry.components[j]);
+      var components = geometry.getComponents();
+      for (var j = 0, jj = components.length; j < jj; ++j) {
+        this.addSegments_(layer, feature, components[j]);
       }
     } else {
       this.addSegments_(layer, feature, geometry);
@@ -235,6 +236,7 @@ ol.interaction.Modify.prototype.handleDrag = function(evt) {
     var geometry = segmentData[2];
     var coordinates = geometry.getCoordinates();
     var index = dragSegment[2];
+    console.log(segmentData[3]);
     coordinates[segmentData[3] + index] = vertex;
     geometry.setCoordinates(coordinates);
 
