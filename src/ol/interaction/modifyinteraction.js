@@ -236,7 +236,6 @@ ol.interaction.Modify.prototype.handleDrag = function(evt) {
     var geometry = segmentData[2];
     var coordinates = geometry.getCoordinates();
     var index = dragSegment[2];
-    console.log(segmentData[3]);
     coordinates[segmentData[3] + index] = vertex;
     geometry.setCoordinates(coordinates);
 
